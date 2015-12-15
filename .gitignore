@@ -1,0 +1,9 @@
+*.self
+*.list
+*.pickle
+*.main
+*.pyc
+__pycache__
+demo/__pycache__
+demo/*.pyc
+demo/*.pickle

@@ -1,0 +1,71 @@
+set nocompatible
+
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'easymotion/vim-easymotion'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-commentary'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'luochen1990/rainbow'
+let g:rainbow_conf = {
+    \    'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+    \    'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+    \    'operators': '_,_',
+    \    'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold']
+    \}
+
+
+call vundle#end()
+filetype plugin indent on
+
+""""""""""""""""""""""""""""""""""
+syntax on
+colorscheme solarized
+set background=dark
+
+set ts=4
+set sw=4
+set sts=4
+set expandtab
+set mouse=a
+set incsearch
+set relativenumber
+set number
+
+set clipboard=unnamed,unnamedplus
+
+set laststatus=2
+
+""""""""""""""""""""""""""""""""""
+no <up> <nop>
+no <down> <nop>
+no <left> <nop>
+no <right> <nop>
+vno <up> <nop>
+vno <down> <nop>
+vno <left> <nop>
+vno <right> <nop>
+ino <up> <nop>
+ino <down> <nop>
+ino <left> <nop>
+ino <right> <nop>
+
+nnoremap <Space>j <C-f>zz
+nnoremap <Space>k <C-b>zz
+vnoremap <Space>j <C-f>zz
+vnoremap <Space>k <C-b>zz
+
+let mapleader=','
+
+" auto-complete
+imap { {}<Esc>i
+imap [ []<Esc>i
+imap ( ()<esc>i
+imap '' ''<Esc>i
+imap "" ""<Esc>i
+imap <> <><Esc>i
+
+imap <F2> <Esc>la
